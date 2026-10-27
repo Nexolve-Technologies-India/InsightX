@@ -31,7 +31,7 @@ const NewsComponent = () => {
   const [error, setError] = useState(null);
   const [sentimentData, setSentimentData] = useState({ timeline: [], distribution: [] });
 
-  const API_KEY = '63fd6e600c0a4246bcfefbab8a81d061';
+  const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
   const processArticlesForCharts = (articles) => {
     // Process for timeline chart
